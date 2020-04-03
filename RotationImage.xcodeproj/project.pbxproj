@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		BE50C9742436F3D300D47738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C9732436F3D300D47738 /* AppDelegate.swift */; };
 		BE50C9762436F3D300D47738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C9752436F3D300D47738 /* SceneDelegate.swift */; };
-		BE50C9782436F3D300D47738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C9772436F3D300D47738 /* ViewController.swift */; };
+		BE50C9782436F3D300D47738 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C9772436F3D300D47738 /* MainViewController.swift */; };
 		BE50C97B2436F3D300D47738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE50C9792436F3D300D47738 /* Main.storyboard */; };
 		BE50C97D2436F3D900D47738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE50C97C2436F3D900D47738 /* Assets.xcassets */; };
 		BE50C9802436F3D900D47738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE50C97E2436F3D900D47738 /* LaunchScreen.storyboard */; };
 		BE50C98B2436F3DA00D47738 /* RotationImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C98A2436F3DA00D47738 /* RotationImageTests.swift */; };
 		BE50C9962436F3DA00D47738 /* RotationImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C9952436F3DA00D47738 /* RotationImageUITests.swift */; };
+		BE50C9A62436FE2200D47738 /* RotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50C9A52436FE2200D47738 /* RotateViewController.swift */; };
+		BE5C876E24370F2300393F9C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C876D24370F2300393F9C /* UIViewController+Extension.swift */; };
+		BE5C877524376BCA00393F9C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C877424376BCA00393F9C /* UIImageView+Extension.swift */; };
+		BE5C877724378FFA00393F9C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C877624378FFA00393F9C /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		BE50C9702436F3D300D47738 /* RotationImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotationImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE50C9732436F3D300D47738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE50C9752436F3D300D47738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE50C9772436F3D300D47738 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE50C9772436F3D300D47738 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE50C97A2436F3D300D47738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE50C97C2436F3D900D47738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE50C97F2436F3D900D47738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		BE50C9912436F3DA00D47738 /* RotationImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotationImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE50C9952436F3DA00D47738 /* RotationImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationImageUITests.swift; sourceTree = "<group>"; };
 		BE50C9972436F3DA00D47738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE50C9A52436FE2200D47738 /* RotateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateViewController.swift; sourceTree = "<group>"; };
+		BE5C876D24370F2300393F9C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BE5C877424376BCA00393F9C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		BE5C877624378FFA00393F9C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,14 @@
 		BE50C9722436F3D300D47738 /* RotationImage */ = {
 			isa = PBXGroup;
 			children = (
+				BE5C876F24372C4A00393F9C /* Extension */,
 				BE50C9732436F3D300D47738 /* AppDelegate.swift */,
 				BE50C9752436F3D300D47738 /* SceneDelegate.swift */,
-				BE50C9772436F3D300D47738 /* ViewController.swift */,
+				BE50C9772436F3D300D47738 /* MainViewController.swift */,
+				BE50C9A52436FE2200D47738 /* RotateViewController.swift */,
 				BE50C9792436F3D300D47738 /* Main.storyboard */,
-				BE50C97C2436F3D900D47738 /* Assets.xcassets */,
 				BE50C97E2436F3D900D47738 /* LaunchScreen.storyboard */,
+				BE50C97C2436F3D900D47738 /* Assets.xcassets */,
 				BE50C9812436F3D900D47738 /* Info.plist */,
 			);
 			path = RotationImage;
@@ -126,6 +136,16 @@
 				BE50C9972436F3DA00D47738 /* Info.plist */,
 			);
 			path = RotationImageUITests;
+			sourceTree = "<group>";
+		};
+		BE5C876F24372C4A00393F9C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BE5C876D24370F2300393F9C /* UIViewController+Extension.swift */,
+				BE5C877424376BCA00393F9C /* UIImageView+Extension.swift */,
+				BE5C877624378FFA00393F9C /* UIImage+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE50C9782436F3D300D47738 /* ViewController.swift in Sources */,
+				BE50C9782436F3D300D47738 /* MainViewController.swift in Sources */,
+				BE5C877724378FFA00393F9C /* UIImage+Extension.swift in Sources */,
 				BE50C9742436F3D300D47738 /* AppDelegate.swift in Sources */,
 				BE50C9762436F3D300D47738 /* SceneDelegate.swift in Sources */,
+				BE5C877524376BCA00393F9C /* UIImageView+Extension.swift in Sources */,
+				BE5C876E24370F2300393F9C /* UIViewController+Extension.swift in Sources */,
+				BE50C9A62436FE2200D47738 /* RotateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H82298CCW;
 				INFOPLIST_FILE = RotationImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ninn.RotationImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H82298CCW;
 				INFOPLIST_FILE = RotationImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ninn.RotationImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

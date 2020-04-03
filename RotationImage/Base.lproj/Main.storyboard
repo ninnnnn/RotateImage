@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egJ-fX-DxV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="RotationImage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="dI2-Aq-Wlt">
+                                <rect key="frame" x="123" y="692" width="168" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewb-uC-9yH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AcG-XP-0kE"/>
+                                            <constraint firstAttribute="width" constant="50" id="lsz-U4-sH4"/>
+                                        </constraints>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="cameraBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z9g-Cl-ucf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD0-ww-i5q">
+                                        <rect key="frame" x="118" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Y10-1P-8Of"/>
+                                            <constraint firstAttribute="width" constant="50" id="vl1-FK-Xu5"/>
+                                        </constraints>
+                                        <state key="normal" image="image"/>
+                                        <connections>
+                                            <action selector="photoBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gso-Cs-Sqp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DOLA" translatesAutoresizingMaskIntoConstraints="NO" id="nQx-1f-aMI">
+                                <rect key="frame" x="20.5" y="308.5" width="373" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nQx-1f-aMI" secondAttribute="height" multiplier="4:3" id="ROd-aG-KBr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nQx-1f-aMI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="6Uh-8S-hwL"/>
+                            <constraint firstItem="dI2-Aq-Wlt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DHb-F4-9Oi"/>
+                            <constraint firstItem="nQx-1f-aMI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SVW-ha-6zL"/>
+                            <constraint firstItem="nQx-1f-aMI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YDt-pC-3Vq"/>
+                            <constraint firstItem="dI2-Aq-Wlt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.6" id="bOB-JR-2l8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8Vn-oF-6PU"/>
+                    <connections>
+                        <outlet property="finalImageView" destination="nQx-1f-aMI" id="5e7-Qt-hyt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
+        </scene>
+        <!--Rotate View Controller-->
+        <scene sceneID="7uF-tz-DGg">
+            <objects>
+                <viewController storyboardIdentifier="RotateViewController" id="YXe-92-GV8" customClass="RotateViewController" customModule="RotationImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hTC-t7-d2U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-qv-6vR">
+                                <rect key="frame" x="20.5" y="308.5" width="373" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2cz-qv-6vR" secondAttribute="height" multiplier="4:3" id="bAX-m3-Nzt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-76-Mkt">
+                                <rect key="frame" x="137" y="702" width="140" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-eQ-GKw">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Sq4-YQ-2Bl"/>
+                                            <constraint firstAttribute="width" constant="30" id="uv0-td-ZuF"/>
+                                        </constraints>
+                                        <state key="normal" image="rotate_left"/>
+                                        <connections>
+                                            <action selector="rotateLeftBtnClick:" destination="YXe-92-GV8" eventType="touchUpInside" id="9Ig-Gt-bSD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu9-n5-PJz">
+                                        <rect key="frame" x="110" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="BZJ-bB-SpA"/>
+                                            <constraint firstAttribute="height" constant="30" id="r1j-Yu-Loj"/>
+                                        </constraints>
+                                        <state key="normal" image="rotate_right"/>
+                                        <connections>
+                                            <action selector="rotateRightBtnClick:" destination="YXe-92-GV8" eventType="touchUpInside" id="hWE-Uf-cKr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2cz-qv-6vR" firstAttribute="centerY" secondItem="hTC-t7-d2U" secondAttribute="centerY" id="2oT-cy-ws6"/>
+                            <constraint firstItem="KQN-76-Mkt" firstAttribute="centerY" secondItem="hTC-t7-d2U" secondAttribute="centerY" multiplier="1.6" id="I2Q-Y0-6Pm"/>
+                            <constraint firstItem="2cz-qv-6vR" firstAttribute="width" secondItem="hTC-t7-d2U" secondAttribute="width" multiplier="0.9" id="JWB-WJ-JOn"/>
+                            <constraint firstItem="KQN-76-Mkt" firstAttribute="centerX" secondItem="hTC-t7-d2U" secondAttribute="centerX" id="Q9U-Ne-vF6"/>
+                            <constraint firstItem="2cz-qv-6vR" firstAttribute="centerX" secondItem="hTC-t7-d2U" secondAttribute="centerX" id="nYa-yu-8nA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jdn-tX-PfU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bCr-sL-hgt">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Mc8-gA-y58">
+                            <connections>
+                                <action selector="doneBtnClick:" destination="YXe-92-GV8" id="qp0-9X-M5U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="seletedImage" destination="2cz-qv-6vR" id="9ef-hN-UbY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u46-ZZ-4LJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886.9565217391305" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lcz-PD-evd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="egJ-fX-DxV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="osL-hn-U0i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vgb-Be-nUs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTe-f6-UrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DOLA" width="754" height="1286"/>
+        <image name="camera" width="256" height="256"/>
+        <image name="image" width="256" height="256"/>
+        <image name="placeholder" width="987" height="777"/>
+        <image name="rotate_left" width="256" height="256"/>
+        <image name="rotate_right" width="256" height="256"/>
+    </resources>
 </document>
