@@ -24,7 +24,7 @@
                                             <constraint firstAttribute="height" constant="50" id="AcG-XP-0kE"/>
                                             <constraint firstAttribute="width" constant="50" id="lsz-U4-sH4"/>
                                         </constraints>
-                                        <state key="normal" image="camera"/>
+                                        <state key="normal" image="camera1"/>
                                         <connections>
                                             <action selector="cameraBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z9g-Cl-ucf"/>
                                         </connections>
@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Y10-1P-8Of"/>
                                             <constraint firstAttribute="width" constant="50" id="vl1-FK-Xu5"/>
                                         </constraints>
-                                        <state key="normal" image="image"/>
+                                        <state key="normal" image="image1"/>
                                         <connections>
                                             <action selector="photoBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gso-Cs-Sqp"/>
                                         </connections>
@@ -156,8 +156,8 @@
     </scenes>
     <resources>
         <image name="DOLA" width="754" height="1286"/>
-        <image name="camera" width="256" height="256"/>
-        <image name="image" width="256" height="256"/>
+        <image name="camera1" width="256" height="256"/>
+        <image name="image1" width="256" height="256"/>
         <image name="placeholder" width="987" height="777"/>
         <image name="rotate_left" width="256" height="256"/>
         <image name="rotate_right" width="256" height="256"/>

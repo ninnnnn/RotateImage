@@ -108,12 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				BE5C876F24372C4A00393F9C /* Extension */,
+				BE5C877924379FDA00393F9C /* Controller */,
+				BE5C877824379FCE00393F9C /* View */,
 				BE50C9732436F3D300D47738 /* AppDelegate.swift */,
 				BE50C9752436F3D300D47738 /* SceneDelegate.swift */,
-				BE50C9772436F3D300D47738 /* MainViewController.swift */,
-				BE50C9A52436FE2200D47738 /* RotateViewController.swift */,
-				BE50C9792436F3D300D47738 /* Main.storyboard */,
-				BE50C97E2436F3D900D47738 /* LaunchScreen.storyboard */,
 				BE50C97C2436F3D900D47738 /* Assets.xcassets */,
 				BE50C9812436F3D900D47738 /* Info.plist */,
 			);
@@ -146,6 +144,24 @@
 				BE5C877624378FFA00393F9C /* UIImage+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BE5C877824379FCE00393F9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE50C9792436F3D300D47738 /* Main.storyboard */,
+				BE50C97E2436F3D900D47738 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE5C877924379FDA00393F9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE50C9772436F3D300D47738 /* MainViewController.swift */,
+				BE50C9A52436FE2200D47738 /* RotateViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

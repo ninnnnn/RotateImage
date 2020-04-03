@@ -26,7 +26,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         imagePicker.delegate = self
-        
     }
 }
 

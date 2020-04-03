@@ -19,11 +19,11 @@ class RotateViewController: UIViewController {
     weak var delegate: FinalImageDelegate?
     
     @IBAction func rotateLeftBtnClick(_ sender: Any) {
-        rotateImageLeft()
+        rotateDirection("left")
     }
     
     @IBAction func rotateRightBtnClick(_ sender: Any) {
-        rotateImageRight()
+        rotateDirection("right")
     }
     
     @IBAction func doneBtnClick(_ sender: Any) {
@@ -40,18 +40,18 @@ class RotateViewController: UIViewController {
     func initView() {
         seletedImage.image = holderImage
     }
-
-    func rotateImageLeft() {
-        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.4, delay: 0, options: .curveLinear, animations: {
-            self.seletedImage.rotate(imageView: self.seletedImage, degree: -CGFloat(Double.pi/2))
-        }, completion: nil)
-        holderImage = holderImage?.rotate(radians: -CGFloat(Double.pi/2))
-    }
     
-    func rotateImageRight() {
+    func rotateDirection(_ dir: String) {
+        var degree: CGFloat = 0.0
+        switch dir {
+        case "right":
+            degree = CGFloat(Double.pi/2)
+        default:
+            degree = -CGFloat(Double.pi/2)
+        }
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.4, delay: 0, options: .curveLinear, animations: {
-            self.seletedImage.rotate(imageView: self.seletedImage, degree: CGFloat(Double.pi/2))
+            self.seletedImage.rotate(imageView: self.seletedImage, degree: degree)
         }, completion: nil)
-        holderImage = holderImage?.rotate(radians: CGFloat(Double.pi/2))
+        holderImage = holderImage?.rotate(radians: degree)
     }
 }
